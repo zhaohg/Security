@@ -29,7 +29,7 @@ public class DHUtil {
 			KeyPairGenerator senderKeyPairGenerator = KeyPairGenerator.getInstance("DH");
 			senderKeyPairGenerator.initialize(512);
 			KeyPair senderKeyPair = senderKeyPairGenerator.generateKeyPair();
-			byte[] senderPublicKeyEnc = senderKeyPair.getPublic().getEncoded();//发送方公钥，发送给接收方（网络、文件。。。）
+			byte[] senderPublicKeyEnc = senderKeyPair.getPublic().getEncoded();//发送方公钥，发送给接收方（网络、文件。。。 ）
 			
 			//2.初始化接收方密钥
 			KeyFactory receiverKeyFactory = KeyFactory.getInstance("DH");
